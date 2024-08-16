@@ -1,13 +1,206 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+:root {
+  --primary-color: #4a90e2; /* Light Blue */
+  --secondary-color: #2c3e50; /* Dark Blue */
+  --accent-color: #ecf0f1; /* Light Gray */
+  --background-color: #f7f9fc; /* Off-white */
+  --text-color: #2c3e50; /* Dark Blue */
+  --border-color: #dfe6e9; /* Light Border Color */
+  --font-family: "Montserrat", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 20px;
+  color: #fff;
+  border-bottom: 5px solid var(--secondary-color);
+}
+
+.personal-header {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.personal-header p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.education,
+.workEx {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.skillsCont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skillsCont p {
+  font-size: 14px;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.pdf-resume p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.pdf-resume h2 {
+  font-size: 24px;
+  margin: 15px 0;
+  color: var(--secondary-color);
+}
+
+.heading {
+  border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.add,
+.remove,
+.download,
+.submit-btn {
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.add {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 1px solid var(--primary-color);
+}
+
+.add:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.remove {
+  background-color: #e74c3c;
+  color: #fff;
+  border: 1px solid #e74c3c;
+}
+
+.remove:hover {
+  background-color: var(--accent-color);
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+.download {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: 1px solid var(--secondary-color);
+  margin-top: 20px;
+}
+
+.download:hover {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.submit-btn {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: 1px solid var(--secondary-color);
+  padding: 15px 40px;
+  letter-spacing: 2px;
+  margin-top: 40px;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 1px solid var(--primary-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container form input,
+.container form input:focus,
+button {
+  border: none;
+  border-bottom: 2px solid var(--border-color);
+  width: 100%;
+  max-width: 600px;
+  height: 45px;
+  margin: 15px 0;
+  font-size: 16px;
+  font-family: var(--font-family);
+  padding: 10px;
+  outline: none;
+}
+
+.container form input:focus {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+@media screen and (min-width: 500px) {
+  .container form input,
+  .container form input:focus {
+    width: 100%;
+  }
 }
